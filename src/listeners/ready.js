@@ -24,7 +24,7 @@ module.exports = class extends Listener {
     await this.createSlashCommands();
     console.log('Ready!')
     this.printStoreDebugInformation();
-    this.container.client.user.setActivity(`${this.container.client.options.defaultPrefix}help | ${this.container.client.guilds.cache.size} Servers`);
+    this.container.client.user.setActivity(`/help | ${this.container.client.guilds.cache.size} Servers`);
   }
  
   async createSlashCommands() {
