@@ -22,8 +22,7 @@ module.exports = class extends Listener {
  
   async run() {
     await this.createSlashCommands();
- 
-    await this.printBanner();
+    console.log('Ready!')
     this.printStoreDebugInformation();
     this.container.client.user.setActivity(`${this.container.client.options.defaultPrefix}help | ${this.container.client.guilds.cache.size} Servers`);
   }
@@ -42,39 +41,6 @@ module.exports = class extends Listener {
       }
     }
   }
- 
-  async printBanner() {
-    const success = green("+");
- 
-    const llc = dev ? magentaBright : white;
-    const blc = dev ? magenta : blue;
- 
-    const line01 = llc("    _______  __ ___    __  _______  __    ______");
-    const line02 = llc("   / ____/ |/ //   |  /  |/  / __ \\/ /   / ____/");
-    const line03 = llc("  / __/  |   // /| | / /|_/ / /_/ / /   / __/   ");
-    const line04 = llc(" / /___ /   |/ ___ |/ /  / / ____/ /___/ /___   ");
-    const line05 = llc("/_____//_/|_/_/__|_/_/__/_/_/___/_____/_____/   ");
-    const line06 = llc("              / __ )/ __ \\/_  __/               ");
-    const line07 = llc(" ____________/ __  / / / / / /___________       ");
-    const line08 = llc("/_____/_____/ /_/ / /_/ / / /_____/_____/       ");
-    const line09 = llc("           /_____/\\____/ /_/                    ");
-    const pad = " ".repeat(7);
- 
-    console.log(
-      String.raw`
- ${line01}
- ${line02}${dev ? `${pad}${blc("<")}${llc("/")}${blc(">")} ${llc("DEVELOPMENT MODE")}` : ""}
- ${line03}${pad}${blc(version)}
- ${line04}${pad}[${success}] Gateway
- ${line05}
- ${line06}
- ${line07}
- ${line08}
- ${line09}
-     `.trim()
-    );
-  }
- 
   printStoreDebugInformation() {
     const { client, logger } = this.container;
     const stores = [...client.stores.values()];
