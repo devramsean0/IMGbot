@@ -23,7 +23,6 @@ const { MessageEmbed } = require('discord.js');
     await interaction.deferReply();
     const query = interaction.options.getString('query');
     const { file } = await fetch(`https://loremflickr.com/json/g/320/240/${query}/all`).then(response => response.json());
-    console.log(file)
     const Embed = new MessageEmbed()
     .setColor(embedcolor)
     .setTitle(`${botname} | ${query} Image`)
