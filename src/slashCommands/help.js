@@ -19,7 +19,7 @@
      .addFields(
         {name: '/img {query}', value: 'Displays a image of your query'},
         {name: '/ping', value: 'gives you the ping to the bot'},
-        {name: '/gif {query}', value: 'not ready yet!'},
+        {name: '/gif {query}', value: 'sometimes displays a image of your query othertimes the embed just dies and gives you a link.'},
         {name: '/api', value: 'See the Apis we use '}
      )
      await interaction.editReply({embeds: [Embed]});

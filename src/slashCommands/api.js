@@ -19,7 +19,7 @@ module.exports = class Ping extends SlashCommand {
     .setDescription('The apis we use')
     .addFields(
         {name: 'img CMD', value: 'we use lorem flicker for the api <https://loremflickr.com>'},
-        {name: 'gif CMD', value: 'we have not decided yet!'},
+        {name: 'gif CMD', value: 'we use tenor for the api <https://tenor.com>'},
     )
     await interaction.editReply({embeds: [Embed]});
   }
