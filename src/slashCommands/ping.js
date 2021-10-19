@@ -7,7 +7,6 @@
  * 
  */
 const SlashCommand = require("../lib/structures/SlashCommandPiece.js");
-
 module.exports = class Ping extends SlashCommand {
   constructor(context) {
     super(context, {
