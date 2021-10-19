@@ -1,4 +1,4 @@
-require("dotenv").config({ path: "./.env" });
+require("dotenv").config();
 const { SapphireClient } = require("@sapphire/framework");
 require("@sapphire/plugin-logger/register");
 
@@ -18,4 +18,4 @@ class exampleBot extends SapphireClient {
 
 const client = new exampleBot();
 
-client.login();
+client.login(process.env.discord_token);
