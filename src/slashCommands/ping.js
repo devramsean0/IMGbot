@@ -6,6 +6,8 @@
  * https://discordjs.guide/interactions/registering-slash-commands.html#guild-commands
  * 
  */
+const {embedcolor, botname} = require('../../config.json');
+const { MessageEmbed } = require('discord.js');
 const SlashCommand = require("../lib/structures/SlashCommandPiece.js");
 module.exports = class Ping extends SlashCommand {
   constructor(context) {
@@ -20,6 +22,10 @@ module.exports = class Ping extends SlashCommand {
   async run(interaction) {
     await interaction.deferReply();
     const reply = await interaction.editReply("Ping?");
-    await interaction.editReply(`Pong! Latency is ${reply.createdTimestamp - interaction.createdTimestamp}ms. API Latency is ${Math.round(this.container.client.ws.ping)}ms.`);
+    const Embed = new MessageEmbed()
+    .setColor(embedcolor)  
+    .setTitle(`${botname} | Ping`)
+    .setDescription(`Latency: ${reply.createdTimestamp - interaction.createdTimestamp}ms`)
+    await interaction.editReply({embeds: [Embed]});
   }
 };
