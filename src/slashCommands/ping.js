@@ -14,7 +14,7 @@ module.exports = class Ping extends SlashCommand {
       name: "ping",
       description: "Pongs when pinged.",
       options: [],
-      guildOnly: false
+      guildOnly: true
     });
   }
 
