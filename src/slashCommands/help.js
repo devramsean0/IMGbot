@@ -20,6 +20,7 @@
         {name: '/img {query}', value: 'Displays a image of your query'},
         {name: '/ping', value: 'gives you the ping to the bot'},
         {name: '/gif {query}', value: 'not ready yet!'},
+        {name: '/api', value: 'See the Apis we use '}
      )
      await interaction.editReply({embeds: [Embed]});
     }
