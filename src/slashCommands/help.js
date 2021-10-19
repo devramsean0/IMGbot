@@ -1,11 +1,3 @@
-/**
- * This is the most basic slash command example I can offer you guys, it's not
- * using the builder but that can easily be changed. If you want your slash
- * commands to be guild specific, you should consult the discordjs.guide for
- * how to register them to guilds, here's a link;
- * https://discordjs.guide/interactions/registering-slash-commands.html#guild-commands
- * 
- */
  const {embedcolor, botname} = require('../../config.json');
  const SlashCommand = require("../lib/structures/SlashCommandPiece.js");
  const { MessageEmbed } = require('discord.js');
