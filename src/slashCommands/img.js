@@ -23,7 +23,7 @@ const { MessageEmbed } = require('discord.js');
                 type:"STRING"
            }
        ],
-       guildOnly: true
+       guildOnly: process.env.dev
      });
    }
  
