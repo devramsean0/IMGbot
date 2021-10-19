@@ -10,6 +10,7 @@ class exampleBot extends SapphireClient {
     super({
       intents: ["GUILDS","GUILD_MESSAGES","DIRECT_MESSAGES"],
       partials: ["CHANNEL"],
+      shards: 'auto'
     });
 
     this.stores.register(new SlashCommandStore());
